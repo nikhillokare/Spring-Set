@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean class="com.bean.CricketTeam" id="t1">
+   <property name="countryName" value="india"></property>
+   <property name="coachName" value="ms-Dhoni"></property>
+   
+   <property name="players">
+   <set>
+      <ref bean="p1"/>
+      <ref bean="p2"/>
+      <ref bean="p3"/>
+   </set>
+   </property>
+   </bean>
+   
+   <bean class="com.bean.Player" id="p1">
+   <property name="jno" value="18"></property>
+   <property name="PlayerName" value="Virat"></property>
+   </bean>
+   
+   <bean class="com.bean.Player" id="p2">
+   <property name="jno" value="45"></property>
+   <property name="PlayerName" value="Rohit"></property>
+   </bean>
+   
+   <bean class="com.bean.Player" id="p3">
+   <property name="jno" value="10"></property>
+   <property name="PlayerName" value="Sachin"></property>
+   </bean>
+   </beans>
